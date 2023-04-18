@@ -1,0 +1,48 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+}
+.watercontainer{
+    height: 200px;
+    width: 200px;
+    background-color: #80c5de;
+    border-radius:inset 0 0 40px 50px #1c637c;
+    position: relative;
+    overflow: hidden;
+}
+
+.watercontainer::before{
+    position: absolute;
+    content: '';
+    width:200%;
+    height:200%;
+    background-color: #ececec;
+    top: -150%;
+    left: -50%;
+    border-radius: 40%;
+    animation: wave 12s infinite linear;
+}
+
+.watercontainer::after{
+    position: absolute;
+    content: '';
+    width: 204%;
+    height: 204%;
+    background-color: #ececec80;
+    top: -150%;
+    left: -52%;
+    border-radius: 40%;
+    animation: wave 12s infinite linear;
+    animation-delay: 0.5s;
+}
+@keyframes wave {
+    0%{
+        transform: rotate(0deg);
+    }    
+    100%{
+        transform: rotate(360deg);
+    }
+}

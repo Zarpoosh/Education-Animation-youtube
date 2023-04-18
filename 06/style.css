@@ -1,0 +1,53 @@
+body {
+  background-color: #292929;
+}
+section {
+  width: 100%;
+  margin: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 50px;
+  position: relative;
+  transition: 0.3s transform ease-in-out;
+}
+a.menu span {
+  width: 60px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+}
+a.menu span::before,
+a.menu span::after {
+  background-color: white;
+  position: absolute;
+  content: "";
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transition: 0.2s transform ease-in-out;
+  transform-origin: center right;
+}
+a.menu span::before {
+  transform: translateY(-20px);
+}
+a.menu span::after {
+  transform: translateY(20px);
+}
+a.menu:hover span::before {
+  transform: scale(0.6) translateY(0px) rotate(45deg);
+}
+a.menu:hover span::after {
+  transform: scale(0.6) translateY(0px) rotate(-45deg);
+}
+
+a.menu:hover {
+  transform: rotate(90deg);
+  transition-delay: 0.3s;
+}
