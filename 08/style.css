@@ -1,73 +1,53 @@
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "poppins", sans-serif;
+*{
+    
+    margin: 0;
+    padding: 0;
+    
 }
-body {
-  background-color: #292929;
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:300px;
 }
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 100px;
+.con-triangle{
+    display: flex;
+    margin-left: 120px;
+    width: 120px;
+    animation: con-0 1.5s infinite linear;
+    height: 120px;
+   
 }
-.btn {
-  position: relative;
-  padding: 10px 50px;
-  border-radius: 30px;
-  text-decoration: none;
-  color: #292929;
-  background-color: red;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 1s all ease-in-out;
-  overflow: hidden;
+.con-triangle::before, .con-triangle::after{
+    content: "";
+    width: 50%;
+    background-color: #f72585;
+    clip-path: polygon(0 0 ,100% 50%, 0% 100%);
+    animation: inherit;
+    animation-name: con-1;
+    transform-origin: bottom left ;
 }
-.btn::before {
-  position: absolute;
-  content: "";
-  width: 400px;
-  height: 400px;
-  background-color: #ececec;
-  top: -370px;
-  left: -120px;
-  border-radius: 45%;
-  transition: 2s all ease-in-out;
-  animation: wave 10s infinite linear;
+.con-triangle::before{
+    clip-path: polygon(0 50%,100% 0 , 100% 100%);
+    transform-origin: bottom right;
+    --s:-1;
 }
-.btn::after {
-  position: absolute;
-  content: "";
-  width: 400px;
-  height: 400px;
-  background-color: #ececec80;
-  top: -360px;
-  left: -125px;
-  border-radius: 45%;
-  transition: 2s all ease-in-out;
-  animation: wave 9s infinite linear;
+@keyframes con-0 {
+    0% , 34.99%{
+        transform: scaleY(1);
+    }
+    35%,70%{
+        transform: scaleY(-1);
+    }
+    90%,100%{
+        transform: scaleY(-1) rotate(180deg);
+    }
 }
-.btn span {
-  position: relative;
-  z-index: 1;
-}
-.btn:hover {
-  color: #fff;
-}
-.btn:hover::before {
-  top: -450px;
-}
-.btn:hover::after {
-  top: -440px;
-}
-
-@keyframes wave {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes con-1 {
+    0%,10%,70%,100%{
+        transform: translateY(-100%) rotate(calc(var(--s, 1)* 135deg));
+    }
+    35%{
+        transform: translateY(0%) rotate(0deg);
+    }
 }
