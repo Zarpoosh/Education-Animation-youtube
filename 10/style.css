@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(134, 207, 255);
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  color: #ff0088;
+  background: conic-gradient(
+      from -45deg at top 50px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 45deg at right 50px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from 135deg at bottom 50px left 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    ),
+    conic-gradient(
+      from -135deg at left 50px top 50%,
+      #0000,
+      currentColor 1deg 90deg,
+      #0000 91deg
+    );
+  animation: split 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes split {
+  50% {
+    width: 140px;
+    height: 140px;
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
