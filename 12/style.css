@@ -1,0 +1,51 @@
+body{
+    background-color: #00000054;
+}
+section{
+    display: flex;
+    justify-content: center;
+    margin-top: 300px;
+}
+.triangle{
+    margin-left: 80px;
+    width: 120px;
+    height: calc(0.866 * 120px);
+    display: grid;
+    background: conic-gradient(
+        from 149deg at top,
+        #0000,
+        #bf1e62 1deg 60deg,
+        #0000 61deg
+    );
+    animation: dangling 2s infinite 
+    cubic-bezier(0.5,500,0.5,-500);
+    transform-origin: top;
+    
+}
+.triangle::before,
+.triangle::after{
+    content: "";
+    grid-area: 1/1;
+    background: conic-gradient(
+        from 149deg at top,
+        #0000,
+        #02f11e 1deg 60deg,
+        #0000 61deg
+    );
+    transform-origin: inherit;
+    animation: inherit;
+}
+.triangle::after{
+    background: conic-gradient(
+        from 149deg at top,
+        #0000,
+        #0202fa 1deg 60deg,
+        #0000 61deg
+    );
+    animation-timing-function: cubic-bezier(0.5, 800,0.5,-800);
+}
+@keyframes dangling {
+    100%{
+        transform: rotate(0.2deg);
+    }
+}
