@@ -1,0 +1,22 @@
+body {
+  animation: anime 4s infinite;
+  background: linear-gradient(
+    to left,
+    rgba(97, 61, 255, 0.803),
+    rgba(1, 230, 255, 0.684),
+    rgba(193, 5, 255, 0.821)
+  );
+  background-size: 400%;
+  height: 100vh;
+}
+@keyframes anime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
