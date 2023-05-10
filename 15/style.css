@@ -1,0 +1,32 @@
+body {
+  background-color: black;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 300px;
+  border-bottom: 1px solid white;
+}
+.ball {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: orange;
+  position: relative;
+  margin: 70px;
+  top: 0px;
+  left: 0px;
+  animation: move-l 2s , move-t 0.3s;
+  animation-timing-function: cubic-bezier(0.5, -200, 0.5 ,200);
+  animation-iteration-count: infinite;
+}
+@keyframes move-l {
+  100% {
+    left: 3px;
+  }
+}
+@keyframes move-t {
+  100% {
+    top: 0.8px;
+  }
+}
