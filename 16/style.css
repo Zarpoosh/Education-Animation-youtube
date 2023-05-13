@@ -1,0 +1,53 @@
+body{
+    background-color: #2a3950;
+}
+section{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}ul{
+    list-style: none;
+    width: 250px;
+
+}
+ul li{
+    width: 100%;
+    margin: 3px 0;
+    border-radius: 5px;
+    transition: 0.3s all ease;
+    background:linear-gradient(135deg ,#fe9677, #f6468f);
+}
+ul li a{
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    letter-spacing: 1px;
+}
+ul li:hover a{
+    box-shadow: 0 2px 5px rgba(0, 0, 0,0.6 );
+    transform: scale(1);
+    font-size: 30px;
+}
+
+ul li:hover a{
+    text-align: right;
+    animation: anime 0.3s linear;
+    
+}
+@keyframes anime {
+    0%, 100%{
+        opacity: 1;
+        letter-spacing: 1px;
+    }    
+    50%{
+        opacity: 1;
+        letter-spacing: 100px;
+    }
+}
