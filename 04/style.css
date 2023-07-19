@@ -4,10 +4,11 @@
     box-sizing: border-box;
 }
 body{
-    background-color: blue;
+    background-color: rgb(60, 0, 255);
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 700px;
 }
 html, body{
     height: 100%;
@@ -15,7 +16,7 @@ html, body{
 .ball{
     width: 150px;
     height: 10px;
-    background-color: #fff;
+    background-color: #f6ff00;
     position: relative;
     transform: rotate(0deg);
     animation: updown 1.5s infinite ;
@@ -24,7 +25,7 @@ html, body{
     content: '';
     width: 50px;
    height: 50px;
-   background: white;
+   background: #f6ff00;
    display: block;
    border-radius: 50%;
    position: absolute;
